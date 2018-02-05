@@ -1,0 +1,47 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Spirit Animal</string>
+    <string name="quiz_name">What is your spirit animal?</string>
+
+    <string name="start_button">Start</string>
+
+    <string name="question1">I feel myself more comfortable:</string>
+    <string name="answer1_1">In the morning</string>
+    <string name="answer1_2">In the night</string>
+    <string name="answer1_3">While sleeping</string>
+
+    <string name="question2">Choose your common activity:</string>
+    <string name="answer2_1">Work all day, sleep all night</string>
+    <string name="answer2_2">Party all night, sleep all day</string>
+    <string name="answer2_3">Sleep... Just sleep</string>
+
+    <string name="question3">What\'s your element:</string>
+    <string name="answer3_1">Fire</string>
+    <string name="answer3_2">Wood</string>
+    <string name="answer3_3">Pillow</string>
+
+    <string name="question4">How rather would you spend your free time:</string>
+    <string name="answer4_1">Getting together with my friends</string>
+    <string name="answer4_2">Creative activity (arts and crafts) or reading books</string>
+    <string name="answer4_3">Playing video games, eating junk food</string>
+
+    <string name="question5">Best practice for me to learn something is:</string>
+    <string name="answer5_1">College, university</string>
+    <string name="answer5_2">Online courses</string>
+    <string name="answer5_3">9gag</string>
+
+    <string name="toast">Please answer all questions</string>
+
+    <string name="result_button">See the result</string>
+
+    <string name="congrats">Congrats!</string>
+
+    <string name="message"><xliff:g id="animal" example="Brave Eagle">%s</xliff:g> is your spirit animal</string>
+
+    <string name="tiger">Brave Tiger</string>
+    <string name="owl">Wise Owl</string>
+    <string name="sloth">Cutie Sloth</string>
+
+    <string name="legal">All copyrights belong to respective authors</string>
+    <string name="try_again">Try again</string>
+
+</resources>
