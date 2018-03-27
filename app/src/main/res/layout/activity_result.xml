@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/picture"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:layout_width="@dimen/rezultImageSize"
+        android:layout_height="@dimen/rezultImageSize"
         android:layout_centerInParent="true"
         android:scaleType="centerCrop" />
 
@@ -21,23 +21,23 @@
         android:id="@+id/congrats"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="@dimen/marginCongrats"
+        android:layout_marginVertical="@dimen/sizeCongrats"
         android:gravity="center"
-        android:text="@string/congrats"
+        android:text="Text placeholder"
         android:textColor="@android:color/white"
-        android:textSize="50sp" />
+        android:textSize="@dimen/sizeCongrats" />
 
     <TextView
         android:id="@+id/message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="@dimen/marginResultText"
         android:gravity="center"
-        android:text="Text"
+        android:text="Text placeholder"
         android:textColor="@android:color/white"
-        android:textSize="35sp" />
+        android:textSize="@dimen/sizeResultText" />
 
     <TextView
         android:layout_width="match_parent"
@@ -46,20 +46,19 @@
         android:gravity="center"
         android:text="@string/legal"
         android:textAllCaps="true"
-        android:textColor="#66FFFFFF"
-        android:textSize="8sp" />
+        android:textColor="@color/colorLegal"
+        android:textSize="@dimen/sizeLegal" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/marginBottomLegal"
         android:background="@android:color/transparent"
         android:onClick="startAgain"
         android:text="@string/try_again"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
-
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sizeTryAgain" />
 
 </RelativeLayout>

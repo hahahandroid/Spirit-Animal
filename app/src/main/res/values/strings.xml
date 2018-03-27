@@ -29,13 +29,18 @@
     <string name="answer5_2">Online courses</string>
     <string name="answer5_3">9gag</string>
 
-    <string name="toast">Please answer all questions</string>
+    <string name="question6">*Describe your workspace(s):</string>
+    <string name="answer6_1">Special place at home</string>
+    <string name="answer6_2">Сozy cafe</string>
+    <string name="answer6_3">Couch</string>
+
+    <string name="err_questions">Please answer all questions</string>
+    <string name="err_name">Hello! My name is Cath! What is yours?</string>
 
     <string name="result_button">See the result</string>
 
-    <string name="congrats">Congrats!</string>
-
-    <string name="message"><xliff:g id="animal" example="Brave Eagle">%s</xliff:g> is your spirit animal</string>
+    <string name="congratulation">Congrats, <xliff:g example="Vladimir Putin" id="username">%s</xliff:g>! </string>
+    <string name="message"><xliff:g example="Brave Eagle" id="animal">%s</xliff:g> is your spirit animal</string>
 
     <string name="tiger">Brave Tiger</string>
     <string name="owl">Wise Owl</string>
@@ -43,5 +48,6 @@
 
     <string name="legal">All copyrights belong to respective authors</string>
     <string name="try_again">Try again</string>
+    <string name="hintName">What is yor name?</string>
 
 </resources>

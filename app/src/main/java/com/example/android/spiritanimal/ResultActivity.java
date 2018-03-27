@@ -17,12 +17,16 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        TextView congrats = findViewById(R.id.congrats);
         ImageView picture = findViewById(R.id.picture);
         TextView message = findViewById(R.id.message);
 
-        Intent intent = getIntent();
-        int variant = intent.getIntExtra("variant", 0);
+        Intent thisActivity = getIntent();
 
+        String name = thisActivity.getStringExtra("name");
+        congrats.setText(getString(R.string.congratulation, name));
+
+        int variant = thisActivity.getIntExtra("variant", 0);
         switch (variant) {
             case 1:
                 picture.setImageResource(R.drawable.tiger);
@@ -43,6 +47,5 @@ public class ResultActivity extends AppCompatActivity {
     public void startAgain(View view) {
         Intent myIntent = new Intent(this, MainActivity.class);
         startActivity(myIntent);
-
     }
 }

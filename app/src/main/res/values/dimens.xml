@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginQuizName">16dp</dimen>
+    <dimen name="sizeTextQuiz">50sp</dimen>
+    <dimen name="marginName">16dp</dimen>
+    <dimen name="sizeName">25dp</dimen>
+    <dimen name="sizeStart">20sp</dimen>
+    <dimen name="rezultImageSize">280dp</dimen>
+    <dimen name="sizeCongrats">50sp</dimen>
+    <dimen name="marginCongrats">30dp</dimen>
+    <dimen name="marginResultText">50dp</dimen>
+    <dimen name="sizeResultText">35sp</dimen>
+    <dimen name="sizeLegal">8sp</dimen>
+    <dimen name="sizeTryAgain">20sp</dimen>
+    <dimen name="marginBottomLegal">10dp</dimen>
+    <dimen name="sizeButton">18sp</dimen>
+    <dimen name="heightImage">75dp</dimen>
+    <dimen name="paddingQuizActivity">16dp</dimen>
+    <dimen name="marginVerticalQuiz">16dp</dimen>
+    <dimen name="marginAnswer">8dp</dimen>
+    <dimen name="sizeTextAnswer">16sp</dimen>
+</resources>

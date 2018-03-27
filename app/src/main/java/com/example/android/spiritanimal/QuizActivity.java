@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -28,6 +29,10 @@ public class QuizActivity extends AppCompatActivity {
         RadioGroup question5 = findViewById(R.id.question5);
         int answer5 = question5.getCheckedRadioButtonId();
 
+        CheckBox answer6_1 = findViewById(R.id.answer6_1);
+        CheckBox answer6_2 = findViewById(R.id.answer6_2);
+        CheckBox answer6_3 = findViewById(R.id.answer6_3);
+
         int variant1 = 0;
         int variant2 = 0;
         int variant3 = 0;
@@ -35,43 +40,82 @@ public class QuizActivity extends AppCompatActivity {
         boolean err = false;
 
         switch (answer1) {
-            case R.id.answer1_1: variant1++; break;
-            case R.id.answer1_2: variant2++; break;
-            case R.id.answer1_3: variant3++; break;
-            default: err = true;
+            case R.id.answer1_1:
+                variant1++;
+                break;
+            case R.id.answer1_2:
+                variant2++;
+                break;
+            case R.id.answer1_3:
+                variant3++;
+                break;
+            default:
+                err = true;
 
         }
         switch (answer2) {
-            case R.id.answer2_1: variant1++; break;
-            case R.id.answer2_2: variant2++; break;
-            case R.id.answer2_3: variant3++; break;
-            default: err = true;
+            case R.id.answer2_1:
+                variant1++;
+                break;
+            case R.id.answer2_2:
+                variant2++;
+                break;
+            case R.id.answer2_3:
+                variant3++;
+                break;
+            default:
+                err = true;
         }
         switch (answer3) {
-            case R.id.answer3_1: variant1++; break;
-            case R.id.answer3_2: variant2++; break;
-            case R.id.answer3_3: variant3++; break;
-            default: err = true;
+            case R.id.answer3_1:
+                variant1++;
+                break;
+            case R.id.answer3_2:
+                variant2++;
+                break;
+            case R.id.answer3_3:
+                variant3++;
+                break;
+            default:
+                err = true;
         }
         switch (answer4) {
-            case R.id.answer4_1: variant1++; break;
-            case R.id.answer4_2: variant2++; break;
-            case R.id.answer4_3: variant3++; break;
-            default: err = true;
+            case R.id.answer4_1:
+                variant1++;
+                break;
+            case R.id.answer4_2:
+                variant2++;
+                break;
+            case R.id.answer4_3:
+                variant3++;
+                break;
+            default:
+                err = true;
         }
         switch (answer5) {
-            case R.id.answer5_1: variant1++; break;
-            case R.id.answer5_2: variant2++; break;
-            case R.id.answer5_3: variant3++; break;
-            default: err = true;
+            case R.id.answer5_1:
+                variant1++;
+                break;
+            case R.id.answer5_2:
+                variant2++;
+                break;
+            case R.id.answer5_3:
+                variant3++;
+                break;
+            default:
+                err = true;
         }
 
         if (err) {
-            Toast.makeText(this, getText(R.string.toast), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getText(R.string.err_questions), Toast.LENGTH_SHORT).show();
             return;
         }
 
-        Intent result = new Intent(this, ResultActivity.class);
+        if (answer6_1.isChecked()) variant1++;
+        if (answer6_2.isChecked()) variant2++;
+        if (answer6_3.isChecked()) variant3++;
+
+        Intent resultActivity = new Intent(this, ResultActivity.class);
 
         Log.v("quiz", "v1: " + variant1);
         Log.v("quiz", "v2: " + variant2);
@@ -82,13 +126,15 @@ public class QuizActivity extends AppCompatActivity {
         Log.v("quiz", "max: " + max);
 
         if (variant1 >= max) {
-            result.putExtra("variant", 1);
+            resultActivity.putExtra("variant", 1);
         } else if (variant2 >= max) {
-            result.putExtra("variant", 2);
+            resultActivity.putExtra("variant", 2);
         } else {
-            result.putExtra("variant", 3);
+            resultActivity.putExtra("variant", 3);
         }
-
-        startActivity(result);
+        Intent thisActivity = getIntent();
+        String name = thisActivity.getStringExtra("name");
+        resultActivity.putExtra("name", name);
+        startActivity(resultActivity);
     }
 }
